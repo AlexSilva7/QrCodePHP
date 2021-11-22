@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 htdocs/app_help_desk/
+web: vendor/bin/heroku-php-apache2 
