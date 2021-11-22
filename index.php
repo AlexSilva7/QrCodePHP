@@ -1,17 +1,13 @@
-
 <?php 
-
 //composer require mpdf/qrcode
 require __DIR__.'/vendor/autoload.php';
 
 //require 'vendor/autoload.php';
-
 //require "app/Pix/Payload.php";
+
 use \App\Pix\Payload;
 use Mpdf\QrCode\QrCode;
 use Mpdf\QrCode\Output;
-
-
 
 //INSTANCIA PRINCIPAL DO PAYLOAD PIX
 $obPayload = (new Payload)->setPixKey('alexaraujo_rj@yahoo.com.br')
@@ -27,17 +23,20 @@ $payloadQrCode = $obPayload->getPayload();
 //QR CODE
 $obQrCode = new QrCode($payloadQrCode);
 
-$image = (new Output\Png)->output($obQrCode,400);
+
+$image = (new Output\png)->output($obQrCode,400);
 
 header('Content-Type: image/png');
 echo $image;
 
+
 /*
 echo "<pre>";
-print_r($payloadQrCode);
+print_r($obQrCode);
 echo "</pre>";
 exit;
 */
+
 
 /*
 <!--

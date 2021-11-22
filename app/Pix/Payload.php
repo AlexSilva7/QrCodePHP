@@ -1,7 +1,5 @@
-
 <?php
-
-namespace App\Pix;
+namespace app\Pix;
 
 class Payload{
  /**
